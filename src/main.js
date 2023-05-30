@@ -10,8 +10,11 @@ const vuetify = createVuetify({
   components,
   directives,
 })
+import router from './router/router.js'
 
-createApp(App).use(vuetify).mount('#app')
+
+
+createApp(App).use(router).use(vuetify).mount('#app')
 
 const myCustomLightTheme = {
     dark: false,
@@ -37,3 +40,7 @@ const myCustomLightTheme = {
       },
     },
   })
+
+  
+
+  

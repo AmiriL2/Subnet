@@ -6,25 +6,87 @@
 
 <template>
 <v-app id="inspire">
-    <v-navigation-drawer
-      model-value
-      class="pt-4"
-      color="grey-lighten-3"
-      rail
-    >
-      <v-avatar
-        v-for="n in 6"
-        :key="n"
-        :color="`grey-${n === 1 ? 'darken' : 'lighten'}-1`"
-        :size="n === 1 ? 36 : 20"
-        class="d-block text-center mx-auto mb-9"
-      ></v-avatar>
-    </v-navigation-drawer>
+    <v-app-bar flat>
+      <v-container class="fill-height d-flex align-center">
+        <v-avatar
+          class="me-10 ms-4"
+          color="grey-darken-1"
+          size="32"
+        ></v-avatar>
 
-    <v-main>
-      <!--  -->
+        <v-btn to="/">Home</v-btn>
+        <v-btn to="/calculator">Calculator</v-btn>
+        <v-btn to="/contact">Contact</v-btn>
+
+        <v-spacer></v-spacer>
+
+        <v-responsive max-width="260">
+          <v-text-field
+            density="compact"
+            hide-details
+            variant="solo"
+          ></v-text-field>
+        </v-responsive>
+      </v-container>
+    </v-app-bar>
+
+    <v-main class="bg-grey-lighten-3">
+      <v-container>
+        <v-row>
+          
+
+          <v-col>
+            <v-sheet
+              min-height="70vh"
+              rounded="lg"
+            >
+              <!--  -->
+            </v-sheet>
+          </v-col>
+        </v-row>
+      </v-container>
+    </v-main>
+  </v-app>     <v-app id="inspire">
+    <v-app-bar flat>
+      <v-container class="fill-height d-flex align-center">
+        <v-avatar
+          class="me-10 ms-4"
+          color="grey-darken-1"
+          size="32"
+        ></v-avatar>
+
+        <v-btn to="/">Home</v-btn>
+        <v-btn to="/calculator">Calculator</v-btn>
+        <v-btn to="/contact">Contact</v-btn>
+
+        <v-spacer></v-spacer>
+
+        <v-responsive max-width="260">
+          <v-text-field
+            density="compact"
+            hide-details
+            variant="solo"
+          ></v-text-field>
+        </v-responsive>
+      </v-container>
+    </v-app-bar>
+
+    <v-main class="bg-grey-lighten-3">
+      <v-container>
+        <v-row>
+          <v-col cols="2">
+            <v-sheet rounded="lg">
+
+                <v-divider class="my-2"></v-divider>
+            </v-sheet>
+          </v-col>
+
+              <!--  -->
+        </v-row>
+      </v-container>
     </v-main>
   </v-app>
+ <router-view />
 </template>
 
 <style>
