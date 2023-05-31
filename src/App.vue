@@ -1,7 +1,5 @@
 <script>
- export default {
-    //
-  }
+
 </script>
 
 <template>
@@ -40,53 +38,13 @@
               min-height="70vh"
               rounded="lg"
             >
-              <!--  -->
+              <router-view />
             </v-sheet>
           </v-col>
         </v-row>
       </v-container>
     </v-main>
-  </v-app>     <v-app id="inspire">
-    <v-app-bar flat>
-      <v-container class="fill-height d-flex align-center">
-        <v-avatar
-          class="me-10 ms-4"
-          color="grey-darken-1"
-          size="32"
-        ></v-avatar>
-
-        <v-btn to="/">Home</v-btn>
-        <v-btn to="/calculator">Calculator</v-btn>
-        <v-btn to="/contact">Contact</v-btn>
-
-        <v-spacer></v-spacer>
-
-        <v-responsive max-width="260">
-          <v-text-field
-            density="compact"
-            hide-details
-            variant="solo"
-          ></v-text-field>
-        </v-responsive>
-      </v-container>
-    </v-app-bar>
-
-    <v-main class="bg-grey-lighten-3">
-      <v-container>
-        <v-row>
-          <v-col cols="2">
-            <v-sheet rounded="lg">
-
-                <v-divider class="my-2"></v-divider>
-            </v-sheet>
-          </v-col>
-
-              <!--  -->
-        </v-row>
-      </v-container>
-    </v-main>
-  </v-app>
- <router-view />
+  </v-app>    
 </template>
 
 <style>
