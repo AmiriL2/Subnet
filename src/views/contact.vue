@@ -30,7 +30,12 @@ import { ref } from 'vue'
             if (value === '1') return true
 
             return 'Must be checked.'
-          },
+          }, 
+          text(value) {
+            if (value === '0') return true
+
+            return 'Please enter text'
+          }
         },
       })
       const name = useField('name')
@@ -38,6 +43,7 @@ import { ref } from 'vue'
       const email = useField('email')
       const select = useField('select')
       const checkbox = useField('checkbox')
+      const text = useField('text')
 
       const items = ref(['Calculator', 'Website', 'Other..'])
 
@@ -52,6 +58,7 @@ import { ref } from 'vue'
         select,
         checkbox,
         items,
+        text,
         submit,
         handleReset,
       }
@@ -89,13 +96,12 @@ import { ref } from 'vue'
       label="Select"
     ></v-select>
 
-    <v-checkbox
-      v-model="checkbox.value.value"
-      :error-messages="checkbox.errorMessage.value"
-      value="1"
-      label="Option"
-      type="checkbox"
-    ></v-checkbox>
+    <v-textarea 
+    label="Enter Text"
+    v-model="text.value.value" 
+    aria-required="true"
+    :error-messages="text.errorMessage.value"
+    ></v-textarea>
 
     <v-btn class="me-4" type="submit"> submit </v-btn>
 

@@ -4,18 +4,18 @@
 
 <template>
 <v-app id="inspire">
-    <v-app-bar flat>
+    <v-app-bar flat color="blue">
       <v-container class="fill-height d-flex align-center">
         <v-avatar
           class="me-10 ms-4"
           color="grey-darken-1"
           size="32"
         ></v-avatar>
-
+<div class="navbar">
         <v-btn to="/">Home</v-btn>
         <v-btn to="/calculator">Calculator</v-btn>
         <v-btn to="/contact">Contact</v-btn>
-
+      </div>
         <v-spacer></v-spacer>
 
         <v-responsive max-width="260">
@@ -48,5 +48,7 @@
 </template>
 
 <style>
-
+.navbar {
+  margin: auto;
+}
 </style>

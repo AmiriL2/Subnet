@@ -12,6 +12,7 @@
     "vee": "^1.2.0",
     "vee-validate": "^4.9.5",
     "vue": "^3.3.2",
+    "vue-phone-number-input": "^1.12.13",
     "vue-router": "^4.2.1",
     "vuetify": "^3.3.1"
   },
