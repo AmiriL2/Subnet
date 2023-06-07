@@ -11,12 +11,6 @@ const vuetify = createVuetify({
   directives,
 })
 import router from './router/router.js'
-import VuePhoneNumberInput from 'vue-phone-number-input';
-import 'vue-phone-number-input/dist/vue-phone-number-input.css';
-
-Vue.component('vue-phone-number-input', VuePhoneNumberInput);
-
-
 
 createApp(App).use(router).use(vuetify).mount('#app')
 
@@ -35,16 +29,5 @@ const myCustomLightTheme = {
       warning: '#FB8C00',
     },
   }
-  
-  export default createVuetify({
-    theme: {
-      defaultTheme: 'myCustomLightTheme',
-      themes: {
-        myCustomLightTheme,
-      },
-    },
-  })
-
-  
 
   

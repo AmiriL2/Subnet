@@ -45,7 +45,7 @@ import { ref } from 'vue'
       const checkbox = useField('checkbox')
       const text = useField('text')
 
-      const items = ref(['Calculator', 'Website', 'Other..'])
+      const items = ref(['Subnet', 'Website', 'TLS Checker','Other..'])
 
       const submit = handleSubmit(values => {
         alert(JSON.stringify(values, null, 2))
